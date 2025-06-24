@@ -35,10 +35,32 @@ Note that `s` may contain leading or trailing spaces or multiple spaces between 
 - `s` contains English letters (upper-case and lower-case), digits, and spaces `' '`.
 - There is at least one word in `s`.
 
-#### Answer
+#### Answer 1
 ```Python
 class Solution:
     def reverseWords(self, s: str) -> str:
         words = s.strip().split()
         return ' '.join(reversed(words))
 ```
+
+#### Answer 2
+```Python
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        s = s.strip()
+        i = 0
+        j = 0
+        string = ""
+
+        while j <= len(s):
+            if j == len(s) or s[j] == " ":
+                if i != j:
+                    word = s[i:j]
+                    string = word + " " + string
+                i = j + 1
+            j += 1
+            
+        return string.strip()
+```
+
+**Note: The time complexity of strip() in Python is O(n), where n is the length of the string. This is because Python scans from both ends of the string to remove leading and trailing whitespace, which can take linear time in the worst case.**

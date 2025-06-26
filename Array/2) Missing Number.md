@@ -42,3 +42,17 @@ class Solution:
 **Note: This solution uses the mathematical formula for sum of first n natural numbers: n * ( n+1 ) /2**
 **Note: The time complexity of len(list) is O(1) since Python saves the length internally and sum(list) is O(n) since Python iterated through every element**
 
+#### Answer 2
+```Python
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        result = 0
+
+        for i in range(len(nums) + 1):
+            result ^= i 
+
+        for num in nums:
+            result ^= num
+
+        return result
+```

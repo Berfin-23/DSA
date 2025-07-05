@@ -4,7 +4,7 @@ Given an integer array `nums`, in which exactly two elements appear only once an
 
 You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
 
-https://leetcode.com/problems/single-number-iii/description/
+[Link for the question](https://leetcode.com/problems/single-number-iii/description/)
 
 **Example 1:**
 

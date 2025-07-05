@@ -2,7 +2,7 @@
 
 Given a binary array `nums`, return the maximum number of consecutive `1`'s in the array.
 
-https://leetcode.com/problems/max-consecutive-ones/
+[Link for the question](https://leetcode.com/problems/max-consecutive-ones/)
 
 **Example 1:**
 

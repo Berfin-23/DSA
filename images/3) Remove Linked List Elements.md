@@ -26,3 +26,23 @@ Given the `head` of a linked list and an integer `val`, remove all the nodes of 
 - The number of nodes in the list is in the range `[0, 10^4]`.
 - `1 <= Node.val <= 50`
 - `0 <= val <= 50`
+
+```Python
+class Solution:
+    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+        dummy = ListNode(next=head)
+        
+        previous, current = dummy, head
+
+        while current:
+            next = current.next
+
+            if current.val == val:
+                previous.next = next
+            else:
+                previous = current
+
+            current = next
+
+        return dummy.next
+```

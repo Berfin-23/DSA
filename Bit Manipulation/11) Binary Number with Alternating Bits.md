@@ -1,30 +1,32 @@
-693. Binary Number with Alternating Bits
-     Solved
-     Easy
-     Topics
-     premium lock icon
-     Companies
-     Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.
+# 693. Binary Number with Alternating Bits (LeetCode) - Easy
 
-Example 1:
+Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.
 
-Input: n = 5
-Output: true
-Explanation: The binary representation of 5 is: 101
-Example 2:
+[Link for the question](https://leetcode.com/problems/binary-number-with-alternating-bits/)
 
-Input: n = 7
-Output: false
-Explanation: The binary representation of 7 is: 111.
-Example 3:
+## Examples
 
-Input: n = 11
-Output: false
-Explanation: The binary representation of 11 is: 1011.
+**Example 1:**
 
-Constraints:
+> **Input:** `n = 5`
+> **Output:** `true`
+> **Explanation:** The binary representation of `5` is: `101`
 
-1 <= n <= 231 - 1
+**Example 2:**
+
+> **Input:** `n = 7`
+> **Output:** `false`
+> **Explanation:** The binary representation of `7` is: `111`.
+
+**Example 3:**
+
+> **Input:** `n = 11`
+> **Output:** `false`
+> **Explanation:** The binary representation of `11` is: `1011`.
+
+## Constraints
+
+- `1 <= n <= 2^31 - 1`
 
 ```Python
 class Solution:

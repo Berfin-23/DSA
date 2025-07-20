@@ -19,7 +19,7 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `f
 - `1 <= s.length, t.length <= 5 * 10^4`
 - `s` and `t` consist of lowercase English letters.
 
-#### Answer 
+#### Answer 1
 ```Python
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
@@ -36,4 +36,24 @@ class Solution:
             t_hashMap[char] = t_hashMap.get(char, 0) + 1
 
         return s_hashMap == t_hashMap
+```
+
+#### Answer 2
+```python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:  
+        if len(s) != len(t):
+            return False
+
+        counter = {}
+
+        for char in s:
+            counter[char] = counter.get(char, 0) + 1
+
+        for char in t:
+            if char not in counter or counter[char] == 0:
+                return False
+            counter[char] -= 1
+
+        return True
 ```

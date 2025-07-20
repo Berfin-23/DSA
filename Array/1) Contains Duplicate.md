@@ -24,8 +24,7 @@ Given an integer array `nums`, return `true` if any value appears at least twice
 > **Output:** `true`
 
 
-#### Answer
-
+#### Answer 1
 ```Python
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
@@ -35,3 +34,18 @@ class Solution:
 ```
 
 **Note: converting list to set take O(n) time**
+
+#### Answer 2
+```python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        hashSet = set()
+
+        for num in nums:
+            if num in hashSet:
+                return True
+            else:
+                hashSet.add(num)
+
+        return False
+```

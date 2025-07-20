@@ -25,19 +25,17 @@ Given an array of `intervals` where `intervals[i] = [starti, endi]`, merge all o
 ```Python
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:        
-        merged = []
-        intervals.sort(key=lambda x: x[0])
+        intervals.sort(key = lambda x: x[0])
 
-        prev = intervals[0]
+        merged = [intervals[0]]
 
-        for interval in intervals[1:]:
-            if interval[0] <= prev[1]:
-                prev[1] = max(prev[1], interval[1])
+        for start, end in intervals[1:]:
+            lastEnd = merged[-1][1]
+
+            if lastEnd >= start:
+                merged[-1][1] = max(lastEnd, end)
             else:
-                merged.append(prev)
-                prev = interval
-        
-        merged.append(prev)
+                merged.append([start, end])
 
         return merged
 ```

@@ -1,6 +1,7 @@
 # Count Digits (GeeksforGeeks) - Easy
 
 [GeeksforGeeks - Count Digits](https://www.geeksforgeeks.org/problems/count-digits5716/)
+[Leetcode - Count the Digits That Divide a Number](https://leetcode.com/problems/count-the-digits-that-divide-a-number/description/)
 
 Given a positive integer `n`, count the number of digits in `n` that divide `n` evenly (i.e., without leaving a remainder). Return the total number of such digits.
 

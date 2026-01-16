@@ -52,7 +52,7 @@ class Solution:
 
 ### Answer 3
 ```python
-def findDuplicates(self, arr):
+def findDuplicates(arr):
     duplicates = []
 
     for i in range(len(arr)):

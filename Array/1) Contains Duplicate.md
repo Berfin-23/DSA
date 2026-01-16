@@ -49,3 +49,19 @@ class Solution:
 
         return False
 ```
+
+### Answer 3
+```python
+def findDuplicates(self, arr):
+    duplicates = []
+
+    for i in range(len(arr)):
+        index = abs(arr[i]) - 1
+
+        if arr[index] < 0:
+            duplicates.append(abs(arr[i]))
+        else:
+            arr[index] = -arr[index]
+
+    return duplicates
+```
